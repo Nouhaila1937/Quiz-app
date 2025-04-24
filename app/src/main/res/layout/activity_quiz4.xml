@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E0F7FA"
+    tools:context=".Quiz4">
+
+
+    <TextView
+        android:id="@+id/question_number2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Question 4/5"
+        android:textColor="#00796B"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:src="@drawable/joconde" />
+
+        <TextView
+            android:id="@+id/question_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="Qui a peint le célèbre tableau La Joconde ?"
+            android:textColor="#0D47A1"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/answers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/option1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Léonard de Vinci" />
+
+            <RadioButton
+                android:id="@+id/option2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Michel-Ange" />
+
+            <RadioButton
+                android:id="@+id/option3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Raphaël" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="SUIVANT" />
+
+    </LinearLayout>
+</LinearLayout>

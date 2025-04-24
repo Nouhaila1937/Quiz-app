@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#E0F7FA"
+    tools:context=".Quiz2"
+    android:padding="16dp" >
+
+    <TextView
+        android:id="@+id/question_number2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="Question 2/5"
+        android:textColor="#00796B"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:src="@drawable/astronaut" />
+
+        <TextView
+            android:id="@+id/question_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            android:text="Quel est le premier homme à avoir marché sur la Lune ?"
+            android:textColor="#0D47A1"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Choix de réponses -->
+        <RadioGroup
+            android:id="@+id/answers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/option1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Neil Armstrong" />
+
+            <RadioButton
+                android:id="@+id/option2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Buzz Aldrin" />
+
+            <RadioButton
+                android:id="@+id/option3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yuri Gagarin" />
+        </RadioGroup>
+
+        <!-- Bouton NEXT -->
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="SUIVANT" />
+
+    </LinearLayout>
+</LinearLayout>

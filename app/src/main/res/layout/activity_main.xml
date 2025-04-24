@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:src="@drawable/img" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editTextTextEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:layout_weight="1"
+            android:drawableLeft="@android:drawable/sym_action_email"
+            android:drawableTint="#3F51B5"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/editTextTextpasswordAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:layout_weight="1"
+            android:drawableLeft="@android:drawable/ic_lock_lock"
+            android:drawableTint="#3F51B5"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textEmailAddress" />
+
+        <Button
+            android:id="@+id/loginbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="30dp"
+            android:text="Sign up " />
+
+
+        <TextView
+            android:id="@+id/Register"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:text="to register click here"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            />
+    </LinearLayout>
+
+</LinearLayout>
