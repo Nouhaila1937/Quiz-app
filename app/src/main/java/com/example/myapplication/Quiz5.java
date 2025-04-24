@@ -2,10 +2,12 @@ package com.example.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -20,6 +22,9 @@ public class Quiz5 extends AppCompatActivity {
     RadioButton rb;
     int score;
     String CorrectResp="Rabat";
+    private TextView timerTextView;
+    private CountDownTimer countDownTimer;
+    private static final long TIME_LIMIT = 30000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +34,8 @@ public class Quiz5 extends AppCompatActivity {
         if (getIntent().hasExtra("score")) {
             score = getIntent().getIntExtra("score", 0);
         }
+        timerTextView = findViewById(R.id.timerTextView);
+        startTimer();
         bNext=findViewById(R.id.next_button);
         rg=findViewById(R.id.answers);
         bNext.setOnClickListener(new View.OnClickListener() {
@@ -44,8 +51,37 @@ public class Quiz5 extends AppCompatActivity {
                 Intent i1=new Intent(Quiz5.this, Score.class);
                 i1.putExtra("score",score);
                 startActivity(i1);
+                finish();
             }
             }
         });
+    }
+    private void startTimer() {
+        countDownTimer = new CountDownTimer(TIME_LIMIT, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                timerTextView.setText("Temps restant : " + millisUntilFinished / 1000 + "s");
+            }
+
+            @Override
+            public void onFinish() {
+                if (rg.getCheckedRadioButtonId() == -1) {
+                    // Aucune réponse sélectionnée, passez à la question suivante
+                    Intent i1 = new Intent(Quiz5.this, Score.class);
+                    i1.putExtra("score", score);
+                    startActivity(i1);
+                    overridePendingTransition(R.anim.exit, R.anim.entry);
+                    finish();
+                }
+            }
+        }.start();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (countDownTimer != null) {
+            countDownTimer.cancel();
+        }
     }
 }

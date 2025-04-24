@@ -21,6 +21,16 @@
         android:textColor="#00796B"
         android:textSize="20sp"
         android:textStyle="bold" />
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="30"
+        android:textSize="24sp"
+        android:textColor="#FF0000"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,6 +49,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
             android:gravity="center"
             android:text="Quel est l'organe principal du système nerveux central ?"
             android:textColor="#0D47A1"
