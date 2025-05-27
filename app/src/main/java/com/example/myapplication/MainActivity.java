@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     Toast.makeText(MainActivity.this, "Connexion réussie !", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(MainActivity.this, Quiz1.class);
+                                    Intent intent = new Intent(MainActivity.this, QuizActivity.class);
                                     startActivity(intent);
                                     finish();
                                 } else {
